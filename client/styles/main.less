@@ -1,0 +1,294 @@
+
+//@import 'variables.import.less';
+//@import 'mixins.import.less';
+
+
+@import "packages/pfafman:bootstrap3-less/bootstrap.import.less";
+//@import "packages/pfafman:bootstrap-switch-less/lib/less/build.import.less";
+//@import "packages/pfafman:jasny-bootstrap-less/lib/less/variables.import.less";
+//@navmenu-width: 220px;
+//@import "packages/pfafman:jasny-bootstrap-less/lib/less/jasny-bootstrap.import.less";
+
+
+//@import "grayscale.import.less";
+//@import "notFound.import.less";
+
+@import "mixins.import.less";
+
+
+body {
+  background-color: #333;
+  background-image: url('img/mnt.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+html {
+  //-webkit-font-smoothing: antialiased !important;
+  font-smooth: always !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+
+/* to make sure the page being animated is on top */
+.velocity-animating {
+  z-index: 99;
+}
+
+
+.offcanvas-navmenu {
+  //margin-top: 50px;
+  z-index: 1;
+}
+
+.modal-open {
+  .main {
+    .blur(1px);
+  }
+}
+
+.main {
+  position: relative;
+  padding: 10px;
+  padding-bottom: 40px;
+  width: 98%;
+  margin-top: 75px;
+  //margin-bottom: 40px;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: #444;
+  //background-color: #fff;
+  //border-radius: 5px;
+  //box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+  min-height: 100px;
+  opacity: 0.9;
+
+  .page {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    width: 100%;
+  }
+
+  .home {
+    color: #ddd;
+    background: #444;
+    opacity: 0.7;
+    margin: auto;
+    width: 50%;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+    .transition(all 2s ease-in-out);
+    .blur(1px);
+  }
+
+  .home:hover {
+    //color: #333;
+    //background: #ccc;
+    opacity: 0.95;
+    .blur(0px);
+  }
+
+  .home-image {
+    .transition(all 1.0s ease);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    opacity: 0.3;
+    color: red;
+  }
+
+  .home-image:hover {
+    .transform(rotate3d(1, 1, 1, -10deg));
+  }
+
+  .standard {
+    padding: 10px;
+    background-color: #fff;
+    opacity: 0.98;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+  }
+}
+
+.main:hover {
+  //opacity: 0.7;
+}
+
+.navbar-inverse {
+  //opacity: 0.85;
+  a {
+    color: #000;
+  }
+}
+
+.navbar-text {
+  font-size: 14px;
+}
+
+
+.fullscreen {
+  padding: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  height: 30px;
+  opacity: 0.8;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  color: #999;
+  background: rgba(50, 50, 50, 0.85);
+  z-index: 2;
+}
+
+.mobile-nav {
+  //padding-top: 15px;
+}
+
+// MISCELLANEOUS
+
+.browser-warning {
+  background: #BD3535;
+  color: #fff;
+  padding: 0.5em 0;
+  text-align: center;
+
+   a {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+#iron-router-progress {
+    background-color : #777;
+    box-shadow       : 0 0 5px #777;
+}
+
+.iron-table-container {
+  opacity: 0.95;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+  .controls {
+
+      a {
+          //color: #000;
+      }
+      a:hover {
+          //color: @link-hover-color;
+      }
+  }
+}
+
+.activeImg {
+    height: 14px;
+    width: 14px;
+}
+
+.chart {
+  display: inline-block;
+  height: 300px;
+  width: 500px;
+}
+
+.stack-bar-top {
+  top: 0px;
+
+
+  .alert {
+    border-radius: 0px;
+  }
+}
+
+.loading {
+  //position: relative;
+  text-align: center;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  //background-color: #ddd;
+  //opacity: 0.8;
+
+  #spinner {
+      position: relative;
+      margin: auto;
+  }
+}
+
+.hide {
+  display: none;
+  //opacity: 0;
+  //visibility: hidden;
+}
+
+#myNavmenuCanvas {
+  position: relative;
+
+  .navmenu-fixed-left {
+    position: absolute;
+  }
+  .navbar-fixed-top {
+    position: absolute;
+
+    .navbar-toggle {
+      position: relative;
+      display: block;
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+.facts {
+  overflow-y: auto;
+  min-width: 300px;
+  max-height: 400px;
+  padding: 5px;
+  opacity: 1;
+  background-color: #fff;
+  color: #000;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+//@import "epoch.import.less";
