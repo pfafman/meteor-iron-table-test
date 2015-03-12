@@ -87,6 +87,7 @@ class TestDataCollection extends IronTableCollection
     'select':
       edit: true
       contenteditable: true
+      placeholder: "Select an option"
       insert: true
       type: 'select'
       select: [

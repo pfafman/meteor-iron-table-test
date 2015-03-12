@@ -7,8 +7,8 @@ meteor-platform
 coffeescript
 iron:router
 less
-pfafman:bootstrap3-less
 momentjs:moment
 pfafman:font-awesome-4
-pfafman:iron-table
-
+percolate:velocityjs
+pfafman:tabular
+pfafman:iron-table-materialize

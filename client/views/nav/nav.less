@@ -1,0 +1,45 @@
+
+.nav-button {
+  position: fixed;
+  top: 0.5em;
+  left: 0.5em;
+  font-size: 2em;
+  color: #fff;
+}
+
+.side-nav {
+  position: fixed;
+  left: -105%;
+  top: 0;
+  margin: 0;
+  padding: 1em;
+  //min-height: 100%;
+  height: 100%;
+  //width: 100%;
+  background-color: #fff;
+  z-index: 599;
+  display: none;
+  ul {
+    padding: 0;
+    li {
+      padding: 1em;
+      line-height: 2em;
+      list-style-type: none;
+      a {
+        text-decoration: none; 
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 598;
+  display: none;
+}

@@ -2,10 +2,16 @@ Router.configure
   layoutTemplate: 'layout'
   
 
-
-Router.map ->
-
-  @route '/',
-    controller: TestTableController
+Router.route '/',
+  onBeforeAction: ->
+    Router.go('/ironTable')
 
 
+Router.route '/ironTable',
+  controller: TestTableController
+
+
+Router.route '/tabularTable'
+
+
+Router.route '/modalTest'

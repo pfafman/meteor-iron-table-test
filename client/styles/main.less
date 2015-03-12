@@ -3,7 +3,7 @@
 //@import 'mixins.import.less';
 
 
-@import "packages/pfafman:bootstrap3-less/bootstrap.import.less";
+//@import "packages/pfafman:bootstrap3-less/bootstrap.import.less";
 //@import "packages/pfafman:bootstrap-switch-less/lib/less/build.import.less";
 //@import "packages/pfafman:jasny-bootstrap-less/lib/less/variables.import.less";
 //@navmenu-width: 220px;
@@ -18,10 +18,12 @@
 
 body {
   background-color: #333;
+  color: #fff;
   background-image: url('img/mnt.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-size: 12px;
 }
 
 html {
@@ -34,7 +36,9 @@ img {
 }
 
 .container {
-  margin-top: 10px;
+  padding-top: 10px;
+  width: 95%;
+  max-width: 95%;
 }
 
 
@@ -171,9 +175,7 @@ footer {
   z-index: 2;
 }
 
-.mobile-nav {
-  //padding-top: 15px;
-}
+
 
 // MISCELLANEOUS
 
@@ -195,10 +197,12 @@ footer {
 }
 
 .iron-table-container {
-  opacity: 0.95;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+  //opacity: 0.95;
+  //background-color: #fff;
+  color: #000;
+  //border-radius: 5px;
+  //box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
+  overflow: auto;
   .controls {
 
       a {
