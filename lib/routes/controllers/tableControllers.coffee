@@ -3,6 +3,7 @@ DO_FAST_RENDER = false
 
 class @TestTableController extends IronTableController
   doNotShowTitle   : true
+  showTitleLargeOnly: true
   tableTitle       : "Test Table"
   subTitle         : "I am a sub title"
   sortColumn       : 'value'
