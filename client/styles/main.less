@@ -19,10 +19,6 @@
 body {
   background-color: #333;
   color: #fff;
-  background-image: url('img/mnt.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   font-size: 12px;
 }
 
@@ -31,14 +27,49 @@ html {
   font-smooth: always !important;
 }
 
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url(/img/mnt.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .blur(30px);
+  opacity: 0.4;
+}
+
 img {
   max-width: 100%;
 }
 
+.layout {
+  //height: 100%; //100%; // Messes with other things
+  /* to prevent the scrollbars from showing during an animation */
+  //overflow: hidden;
+  width: 100%;
+}
+
 .container {
+  //margin-top: 10em;
+  //position: relative;
   padding-top: 10px;
+  padding-bottom: 10px;
   width: 95%;
   max-width: 95%;
+  max-height: 95%;
+  z-index: -1;
+
+  @media only screen and (max-width : 600px) {
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+  }
 }
 
 
@@ -196,13 +227,13 @@ footer {
     box-shadow       : 0 0 5px #777;
 }
 
-.iron-table-container {
+.my-iron-table-container {
   //opacity: 0.95;
   //background-color: #fff;
   color: #000;
   //border-radius: 5px;
   //box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-  overflow: auto;
+  //overflow: auto;
   .controls {
 
       a {

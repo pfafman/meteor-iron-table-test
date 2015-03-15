@@ -158,6 +158,10 @@ Meteor.methods
     #throw new Meteor.Error(401, "You need to login to update") unless user
     throw new Meteor.Error(422, "No record to update") unless _id
 
+    #check(_id, Mongo.ObjectID)
+
+    attributes = _.omit(attributes, '_id') 
+
     if attributes.measurements?
       measurements = []
       for key, val of attributes.measurements

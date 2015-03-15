@@ -2,6 +2,7 @@
 DO_FAST_RENDER = false
 
 class @TestTableController extends IronTableController
+  doNotShowTitle   : true
   tableTitle       : "Test Table"
   subTitle         : "I am a sub title"
   sortColumn       : 'value'
@@ -18,8 +19,14 @@ class @TestTableController extends IronTableController
   showFilter       : true
   fastRender       : DO_FAST_RENDER
   inabox           : true
+  fullScreenOnSmall: true
   extraControlsTemplate: "testLink"
   showJSON         : true
+  templateClasses  :
+    container: ''
+    box: 'z-depth-1'
+    table: 'centered hoverable bordered' # 'striped'
+
   #newRecordCallback :  (rec) ->
   #   console.log("New Record Callback", rec)
 
