@@ -2,28 +2,28 @@
 DO_FAST_RENDER = false
 
 class @TestTableController extends IronTableController
-  doNotShowTitle   : true
-  showTitleLargeOnly: true
-  tableTitle       : "Test Table"
-  subTitle         : "I am a sub title"
-  sortColumn       : 'value'
-  increment        : 10
-  showBackButton   : true
-  showNewButton    : true
-  #newRecordRoute   : 'addTestData'
-  #editRecordRoute  : 'editTestData'
-  #formTemplate     : 'testDataForm'
-  newRecordTitle   : 'New Record'
-  newRecordTooltip : 'Add a new record'
-  doDownloadLink   : true
-  collection       : -> TestData
-  showFilter       : true
-  fastRender       : DO_FAST_RENDER
-  inabox           : true
-  fullScreenOnSmall: true
+  doNotShowTitle     : true
+  showTitleLargeOnly : true
+  tableTitle         : "Test Table"
+  subTitle           : "I am a sub title"
+  sortColumn         : 'value'
+  increment          : 10
+  showBackButton     : true
+  showNewButton      : true
+  #newRecordRoute     : 'addTestData'
+  #editRecordRoute    : 'editTestData'
+  #formTemplate       : 'testDataForm'
+  newRecordTitle     : 'New Record'
+  newRecordTooltip   : 'Add a new record'
+  doDownloadLink     : true
+  collection         : -> TestData
+  showFilter         : true
+  fastRender         : DO_FAST_RENDER
+  inabox             : true
+  fullScreenOnSmall  : true
   extraControlsTemplate: "testLink"
-  showJSON         : true
-  templateClasses  :
+  showJSON           : true
+  templateClasses :
     container: ''
     box: 'z-depth-1'
     table: 'centered hoverable bordered' # 'striped'
