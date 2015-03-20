@@ -3,6 +3,8 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+# Note: dburles:mongo-collection-instances must be before other packages that use mongo
+
 meteor-platform
 coffeescript
 iron:router
@@ -12,3 +14,5 @@ pfafman:font-awesome-4
 percolate:velocityjs
 pfafman:tabular
 pfafman:iron-table-materialize
+anti:fake
+pfafman:reactive-table

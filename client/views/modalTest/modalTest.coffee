@@ -1,4 +1,5 @@
 
+
 Template.modalTest.events
   
   'click #success': (e, tmpl) ->
@@ -21,6 +22,20 @@ Template.modalTest.events
     console.log('messageTest')
     MaterializeModal.message
       message: 'Message Test'
+
+
+  'click #loadingTest': (e, tmpl) ->
+    console.log('loadingTest')
+    MaterializeModal.loading
+      message: 'I be loading ...'
+
+
+  'click #fullscreenTest': (e, tmpl) ->
+    console.log('messageTest')
+    MaterializeModal.message
+      title: 'Full Screen'
+      message: Fake.paragraph(20)
+      fullscreen: true
   
 
   'click #alertTest': (e, tmpl) ->
@@ -28,7 +43,6 @@ Template.modalTest.events
     MaterializeModal.alert
       title: 'Alert <i>Test</i>'
       message: 'There was an alert',
-      title: 'Alert <i>Test</i>'
   
 
   'click #errorTest': (e, tmpl) ->
@@ -39,8 +53,8 @@ Template.modalTest.events
 
   'click #confirmTest': ->
     console.log('confirmTest')
-    MaterializeModal.confirm 
-      message: 'Do it?', 
+    MaterializeModal.confirm
+      message: 'Do it?'
       callback: (yesNo) ->
         if yesNo
           toast("<i class='mdi-action-done left'></i>Doing it!", 3000, 'green')
@@ -50,8 +64,8 @@ Template.modalTest.events
 
   'click #promptTest': ->
     console.log('promptTest')
-    MaterializeModal.prompt 
-      message: 'Enter something', 
+    MaterializeModal.prompt
+      message: 'Enter something'
       callback: (yesNo, rtn, event) ->
         if yesNo
           if not rtn
@@ -64,14 +78,14 @@ Template.modalTest.events
 
   'click #formTest': ->
     console.log('formTest')
-    MaterializeModal.form 
+    MaterializeModal.form
       bodyTemplate: 'testForm'
       callback: (yesNo, rtn, event) ->
         if yesNo
           if not rtn
             toast("<i class='mdi-alert-warning left'></i>You did not enter anything!", 3000, 'red')
           else
-            toast("<i class='mdi-action-done left'></i>Entered: #{rtn.firstname}, #{rtn.telephone}, #{rtn.checkmark}")
+            toast("<i class='mdi-action-done left'></i>Entered: #{rtn.firstname}, #{rtn.telephone}, #{rtn.checkmark}", 3000)
         else
           toast("<i class='mdi-av-not-interested left'></i>Cancelled", 3000, 'blue')
 
