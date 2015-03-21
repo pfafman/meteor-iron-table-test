@@ -32,7 +32,7 @@ class TestDataCollection extends IronTableCollection # ReactiveTableCollection
     'title':
       placeholder: 'enter a name ...'
       required: true
-      edit: true
+      edit: false
       contenteditable: true
       insert: true
       autofocus: true
@@ -68,7 +68,8 @@ class TestDataCollection extends IronTableCollection # ReactiveTableCollection
           lng = rec.location.coordinates[1].toFixed(3)
           "(#{lat}, #{lng})"
     'comment':
-      edit: true
+      edit: ->
+        true
       insert: true
       contenteditable: true
       class: "hidden-xs"
@@ -77,6 +78,10 @@ class TestDataCollection extends IronTableCollection # ReactiveTableCollection
       helpText: "Do you need some help?"
     'date':
       type: 'date'
+      insert: true
+      edit: true
+    'time':
+      type: 'time'
       insert: true
       edit: true
     'switch':

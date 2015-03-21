@@ -17,5 +17,8 @@ Router.route '/tabularTable'
 Router.route '/modalTest'
 
 
+Router.route '/photoUpTest'
+
+
 Router.route '/reactiveTable',
   template: 'reactiveTablePage'
