@@ -1,12 +1,15 @@
 
 Template.photoUpTest.helpers
   photoUpOptions: ->
-    showInfo: false
+    showInfo: true
+    minDisplayWidth: 300
+    minDisplayHeight: 300
     loadImage:
-      maxWidth: 300
-      maxHeight: 300
-    crop: false # not working
-    jCrop: {}
+      maxWidth: 500
+      maxHeight: 500
+    crop: true
+    jCrop:
+      aspectRatio: 1
     callback: (error, photo) ->
       if error
         toast(error.reason, 3000, 'red')
