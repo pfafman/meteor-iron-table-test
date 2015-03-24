@@ -3,8 +3,7 @@ Router.configure
   
 
 Router.route '/',
-  onBeforeAction: ->
-    Router.go('/ironTable')
+  template: 'home'
 
 
 Router.route '/ironTable',
