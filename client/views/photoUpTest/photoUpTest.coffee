@@ -2,6 +2,7 @@
 Template.photoUpTest.helpers
   photoUpOptions: ->
     showInfo: true
+    showClear: true
     minDisplayWidth: 300
     minDisplayHeight: 300
     loadImage:
