@@ -1,4 +1,8 @@
-Test site for Meteor Iron Table
-===============================
+Test site for Meteor / Materializecss 
+=====================================
 
-WIP
+Test site for some of my meteor packages that use [Materializecss](http://materializecss.com)
+
+**Viewable [here](http://meteor.pfafman.com)**
+
+### WIP ...
