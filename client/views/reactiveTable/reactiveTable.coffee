@@ -1,10 +1,14 @@
 
 
 Template.reactiveTablePage.onCreated ->
-  @table = ReactiveTestTable
+  #@table = ReactiveTestTable.getTable
+  #  style: "max-height: 300px;"
 
 
 Template.reactiveTablePage.helpers
   table: ->
-    Template.instance().table
+    ReactiveTestTable.getTable
+      #style: "max-height: 300px;"
+      sortColumn : 'value'
+
 
