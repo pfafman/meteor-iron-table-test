@@ -1,5 +1,5 @@
 # This needs to be here to set up the server side stuff
-@ReactiveTestTable = new ReactiveTable
+class ReactiveTestTable extends ReactiveTable
   collection: TestData
   #schema:  TestData.schema
   recordName: 'Test Record'
@@ -9,6 +9,8 @@
   methodOnUpdate  : 'updateTestDataRecord'
   methodOnRemove  : 'removeTestDataRecord'
   doRowLink : true
+
+
   downloadFields:
     'title': 1
     'value': 1
@@ -19,6 +21,7 @@
     'last_update': 1
     'location.coordinates.0': 1
     'location.coordinates.1': 1
+  
   schema:
     'title':
       placeholder: 'enter a name ...'
@@ -107,3 +110,19 @@
       onInsert: ->
         new Date()
       valueFunc: Format.DateTime
+
+  insertOk: (record)->
+    true
+
+  deleteAllOk: ->
+    false
+
+  deleteOk: (record) ->
+    true
+
+  editOk: (record) ->
+    true
+
+
+@reactiveTestTable = new ReactiveTestTable()
+
