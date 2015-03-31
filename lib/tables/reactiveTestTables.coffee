@@ -8,7 +8,8 @@ class ReactiveTestTable extends ReactiveTable
   methodOnInsert  : 'insertTestDataRecord'
   methodOnUpdate  : 'updateTestDataRecord'
   methodOnRemove  : 'removeTestDataRecord'
-  doRowLink : true
+  doRowLink       : true
+  newRecordRoute  : 'nowhere'
 
 
   downloadFields:

@@ -8,7 +8,7 @@ Template.reactiveTablePage.onCreated ->
 Template.reactiveTablePage.helpers
   table: ->
     reactiveTestTable.newTable
-      #style: "max-height: 300px;"
+      style: "max-height: 400px;"
       sortColumn : 'value'
       onDelete: (rec) ->
         MaterializeModal.confirm
