@@ -5,7 +5,7 @@ class @TestTableController extends IronTableController
   doNotShowTitle     : true
   showTitleLargeOnly : true
   tableTitle         : "Test Table"
-  subTitle           : "I am a sub title"
+  #subTitle           : "I am a sub title"
   sortColumn         : 'value'
   increment          : 10
   showBackButton     : true
