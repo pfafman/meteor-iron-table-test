@@ -13,8 +13,8 @@ Template.photoUpTest.helpers
       aspectRatio: 1
     callback: (error, photo) ->
       if error
-        toast(error.reason, 3000, 'red')
+        Materialize.toast(error.reason, 3000, 'red')
       else
         console.log("New Photo Callback", photo)
-        toast("Have photo to save", 3000)
+        Materialize.toast("Have photo to save", 3000)
         

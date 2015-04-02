@@ -18,7 +18,7 @@ Template.reactiveTablePage.helpers
             if yesNo
               Meteor.call 'removeTestDataRecord', rec._id, (error, result) ->
                 if error
-                  toast("Error on delete: #{error.reason}", 4000, 'red')
+                  Materialize.toast("Error on delete: #{error.reason}", 4000, 'red')
       # onEdit: (rec) ->
       #   console.log("onEdit", rec)
       #   Router.go('home')
