@@ -10,6 +10,8 @@ Template.reactiveTablePage.helpers
     reactiveTestTable.newTable
       style: "max-height: 400px;"
       sortColumn : 'value'
+      rowLink : (rec) ->
+        console.log("Link on #{rec.title}", rec)
       onDelete: (rec) ->
         MaterializeModal.confirm
           title: 'Delete Test Record'

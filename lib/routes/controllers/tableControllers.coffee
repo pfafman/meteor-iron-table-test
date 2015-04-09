@@ -26,7 +26,10 @@ class @TestTableController extends IronTableController
   templateClasses :
     container: ''
     box: 'z-depth-1'
-    table: 'centered hoverable bordered' # 'striped'
+    table: 'centered bordered' # 'striped'
+
+  rowLink: (rec) ->
+    console.log("Row Click", rec)
 
   #newRecordCallback :  (rec) ->
   #   console.log("New Record Callback", rec)
