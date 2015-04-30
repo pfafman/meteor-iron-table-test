@@ -43,9 +43,9 @@ ordered-dict@1.0.3
 percolate:velocityjs@1.2.1_1
 pfafman:filesaver@0.1.0
 pfafman:font-awesome-4@4.3.0
-pfafman:iron-table-materialize@0.3.0_2
+pfafman:iron-table-materialize@0.3.1
 pfafman:materialize-modal@0.3.1
-pfafman:photo-up@0.2.5
+pfafman:photo-up@0.2.6
 pfafman:reactive-table@0.0.6_1
 pfafman:tabular@1.1.0
 random@1.0.3
