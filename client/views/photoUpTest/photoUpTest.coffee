@@ -19,7 +19,7 @@ Template.photoUpTest.helpers
       maxHeight: 300
       #aspectRatio: 1.6
     
-    autoSelectOnJcrop: true
+    #autoSelectOnJcrop: true
     crop: true
     jCrop:
       aspectRatio: 1.6
