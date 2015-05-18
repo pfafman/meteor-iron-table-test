@@ -34,4 +34,12 @@ Meteor.startup ->
           type: "Point"
           coordinates: [180*Math.random(), 90*Math.random()]
       
+
+  # S3.aws.listBuckets (err, rtn) ->
+  #   if err
+  #     console.log("listBuckets error:", err)
+  #   else
+  #     console.log("listBuckets:", rtn)
+  #     for bucket in rtn.Buckets
+  #       console.log("Bucket: ", bucket.Name, ' : ', bucket.CreationDate)
       

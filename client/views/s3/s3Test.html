@@ -1,0 +1,17 @@
+<template name="s3Test">
+  <h4 class="title">S3 Upload Test</h4>
+
+  <div class="photoUpContainer">
+    <input type="file" class="file_bag">
+    <button class="upload">Upload</button>
+
+    
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" 
+        aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+        <span class="sr-only">{{progress}}% Complete</span>
+      </div>
+    </div>
+  
+  </div>
+</template>

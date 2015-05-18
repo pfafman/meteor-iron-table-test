@@ -20,5 +20,8 @@ Router.route '/modalTest'
 Router.route '/photoUpTest'
 
 
+Router.route '/s3Test'
+
+
 Router.route '/reactiveTable',
   template: 'reactiveTablePage'
