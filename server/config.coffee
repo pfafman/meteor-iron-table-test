@@ -5,12 +5,12 @@
 # S3.config =
 #   key: 'AKIAJ33C3Q6RFI4FRHCA',
 #   secret: '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',
-#   bucket: 'winesail-images'
+#   bucket: 'winesail'
 #   region:  'eu-central-1'
 
-Meteor.settings =
-  AWSAccessKeyId: 'AKIAJ33C3Q6RFI4FRHCA'
-  AWSSecretAccessKey: '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'
+# Meteor.settings =
+#   AWSAccessKeyId: 'AKIAJ33C3Q6RFI4FRHCA'
+#   AWSSecretAccessKey: '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'
 
 
 Meteor.startup ->
@@ -18,7 +18,7 @@ Meteor.startup ->
     AWSAccessKeyId: 'AKIAJ33C3Q6RFI4FRHCA'
     AWSSecretAccessKey: '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'
 
-    bucket: "winesail-images",
+    bucket: "winesail",
     
     acl: "public-read",
     
@@ -35,4 +35,4 @@ Meteor.startup ->
       # Store file into a directory by the user's username.
       #user = Meteor.users.findOne(@userId)
       #user.username + "/" + file.name 
-      "test/#{Meteor.uuid()}_#{file.name}"
+      "images/#{Meteor.uuid()}_#{file.name}"
