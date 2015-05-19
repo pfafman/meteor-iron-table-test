@@ -1,22 +1,7 @@
 
 
-# Winesail access keys
-
-# S3.config =
-#   key: 'AKIAJ33C3Q6RFI4FRHCA',
-#   secret: '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',
-#   bucket: 'winesail'
-#   region:  'eu-central-1'
-
-# Meteor.settings =
-#   AWSAccessKeyId: 'AKIAJ33C3Q6RFI4FRHCA'
-#   AWSSecretAccessKey: '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'
-
-
 Meteor.startup ->
   Slingshot.createDirective "imageFiles", Slingshot.S3Storage,
-    AWSAccessKeyId: 'AKIAJ33C3Q6RFI4FRHCA'
-    AWSSecretAccessKey: '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'
 
     bucket: "winesail",
     
