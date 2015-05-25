@@ -1,0 +1,41 @@
+{
+  // Server authentication info
+  "servers": [
+    {
+      "host": "gcetest.pfafman.com",
+      "username": "tep",
+      "pem": "~/.ssh/google_compute_engine"
+    }
+  ],
+
+  // Install MongoDB in the server, does not destroy local MongoDB on future setup
+  "setupMongo": false,
+
+  // WARNING: Node.js is required! Only skip if you already have Node.js installed on server.
+  "setupNode": true,
+
+  // WARNING: If nodeVersion omitted will setup 0.10.33 by default. Do not use v, only version number.
+  "nodeVersion": "0.10.36",
+
+  // Install PhantomJS in the server
+  "setupPhantom": true,
+
+  // Application name (No spaces)
+  "appName": "materializeTest",
+
+  // Location of app (local directory)
+  "app": "../../app",
+
+  // Configure environment
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://gcetest.pfafman.com",
+    "MONGO_URL": "mongodb://localhost:27017/test",
+    "MONGO_OPLOG_URL": "mongodb://oplogger:PasswordForOplogger@localhost/local?authSource=admin"
+    //"MAIL_URL": "smtp://postmaster%40myapp.mailgun.org:adj87sjhd7s@smtp.mailgun.org:587/"
+  },
+
+  // Meteor Up checks if the app comes online just after the deployment
+  // before mup checks that, it will wait for no. of seconds configured below
+  "deployCheckWaitTime": 30
+}

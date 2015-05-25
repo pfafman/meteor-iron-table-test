@@ -5,4 +5,10 @@
   <div class="photoUpContainer">
     {{> photoUp photoUpOptions}}
   </div>
+  <p></p>
+  <div class="controls center-align">
+    {{#if haveImage}}
+      <button id="save" class="btn">SAVE</button>
+    {{/if}}
+  </div>
 </template>

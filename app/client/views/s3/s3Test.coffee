@@ -25,7 +25,7 @@ Template.s3Test.helpers
 Template.s3Test.events
   'click button.upload': (event, tmpl) ->
     files = tmpl.$("input.file_bag")[0].files
-    console.log("Upload Files", files)
+    console.log("Upload Files", files[0])
 
     tmpl.uploader.send files[0], (error, downloadUrl) ->
       if (error)
