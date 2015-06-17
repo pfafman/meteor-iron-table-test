@@ -657,7 +657,7 @@ if ($) { Vel = $.Velocity } else { Vel = Velocity};
 
   $.fn.extend({
     closeModal: function(options) {
-      var defaults = {
+    	var defaults = {
         out_duration: 250,
         complete: undefined
       }
