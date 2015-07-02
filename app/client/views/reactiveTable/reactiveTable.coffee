@@ -8,6 +8,7 @@ Template.reactiveTablePage.onCreated ->
 Template.reactiveTablePage.helpers
   table: ->
     reactiveTestTable.newTable
+      showFilter: true
       style: "max-height: 400px;"
       sortColumn : 'value'
       rowLink : (rec) ->

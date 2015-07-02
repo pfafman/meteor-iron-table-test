@@ -9,7 +9,8 @@ class ReactiveTestTable extends ReactiveTable
   methodOnUpdate  : 'updateTestDataRecord'
   methodOnRemove  : 'removeTestDataRecord'
   doRowLink       : true
-  newRecordRoute  : 'nowhere'
+  #newRecordRoute  : 'nowhere'
+  showNewButton   : true
 
 
   downloadFields:
@@ -37,10 +38,10 @@ class ReactiveTestTable extends ReactiveTable
       helpText: 'Just a title'
     'value':
       dataKey: 'value'
-      edit: false
+      edit: true
       #contenteditable: true
       class: 'center-align'
-      insert: false
+      insert: true
       type: 'number'
       canFilterOn: true
       onInsert: ->
@@ -76,7 +77,7 @@ class ReactiveTestTable extends ReactiveTable
     'switch':
       edit: true
       #contenteditable: true
-      insert: false
+      insert: true
       canFilterOn: true
       type: 'boolean'
       #checkedMark: 'fa-check-circle'
