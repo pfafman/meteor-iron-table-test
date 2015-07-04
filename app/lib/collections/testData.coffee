@@ -153,6 +153,7 @@ class TestDataCollection extends IronTableCollection # ReactiveTableCollection
 
 # Add a method to do server side delete
 Meteor.methods
+  
   removeTestDataRecord: (select) ->
     #user = Meteor.user()
     #throw new Meteor.Error(401, "Need to be logged in") unless user
@@ -222,3 +223,5 @@ Meteor.methods
         created: new Date() #.getTime()
         updated: new Date() #.getTime()
       TestData.insert(data)
+
+

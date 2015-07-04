@@ -28,27 +28,27 @@ class ReactiveTestTable extends ReactiveTable
     'title':
       placeholder: 'enter a name ...'
       required: true
-      edit: true
+      update: true
       #contenteditable: true
       insert: true
       autofocus: true
-      staticOn_edit: true
+      staticOn_update: true
       tooltip: 'Enter whatever you like'
       canFilterOn: true
       helpText: 'Just a title'
     'value':
       dataKey: 'value'
-      edit: true
+      update: true
       #contenteditable: true
       class: 'center-align'
       insert: true
       type: 'number'
       canFilterOn: true
-      onInsert: ->
-        throw new Meteor.Error(401, 'Test Throw') unless Session.get("testDataValue")?
-        Session.get("testDataValue")
+      # onInsert: ->
+      #   throw new Meteor.Error(401, 'Test Throw') unless Session.get("testDataValue")?
+      #   Session.get("testDataValue")
     'invert':
-      edit: false
+      update: false
       insert: false
       class: 'center-align'
       #contenteditable: true
@@ -67,7 +67,7 @@ class ReactiveTestTable extends ReactiveTable
           lng = rec.location.coordinates[1].toFixed(3)
           "(#{lat}, #{lng})"
     'comment':
-      edit: true
+      update: true
       insert: true
       #contenteditable: true
       class: "hidden-xs"
@@ -75,7 +75,7 @@ class ReactiveTestTable extends ReactiveTable
       canFilterOn: true
       helpText: "Do you need some help?"
     'switch':
-      edit: true
+      update: true
       #contenteditable: true
       insert: true
       canFilterOn: true
@@ -84,7 +84,7 @@ class ReactiveTestTable extends ReactiveTable
       #blankOnNotChecked: true
       #template: 'checkMark'  # Use the canned one
     'select':
-      edit: true
+      update: true
       class: 'center-align'
       #contenteditable: true
       placeholder: "Select an option"
@@ -97,7 +97,7 @@ class ReactiveTestTable extends ReactiveTable
         'three'
       ]
     'created':
-      edit: false
+      update: false
       insert: false
       onInsert: ->
         new Date()
@@ -105,7 +105,7 @@ class ReactiveTestTable extends ReactiveTable
       class: 'visible-lg'
     'last_update':
       header: "updated"
-      edit: false
+      update: false
       insert: false
       onUpdate: ->
         new Date()
@@ -116,13 +116,13 @@ class ReactiveTestTable extends ReactiveTable
   insertOk: (record)->
     true
 
+  updateOk: (record) ->
+    true
+
   removeAllOk: ->
     false
 
   removeOk: (record) ->
-    true
-
-  updateOk: (record) ->
     true
 
 
