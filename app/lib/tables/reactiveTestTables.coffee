@@ -1,7 +1,6 @@
 # This needs to be here to set up the server side stuff
 class ReactiveTestTable extends ReactiveTable
   collection: TestData
-  #schema:  TestData.schema
   recordName: 'Test Record'
   colToUseForName : 'title'
   sortColumn      : 'value'
@@ -11,6 +10,7 @@ class ReactiveTestTable extends ReactiveTable
   doRowLink       : true
   #newRecordRoute  : 'nowhere'
   showNewButton   : true
+  doDownloadLink  : true # Not working ?!?!
 
 
   downloadFields:
@@ -116,13 +116,13 @@ class ReactiveTestTable extends ReactiveTable
   insertOk: (record)->
     true
 
-  deleteAllOk: ->
+  removeAllOk: ->
     false
 
-  deleteOk: (record) ->
+  removeOk: (record) ->
     true
 
-  editOk: (record) ->
+  updateOk: (record) ->
     true
 
 
