@@ -1,19 +1,16 @@
 
-//@import 'variables.import.less';
-//@import 'mixins.import.less';
+// Mixins
+@import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+@import 'mixins';
 
+@import 'fonts';
 
-//@import "packages/pfafman:bootstrap3-less/bootstrap.import.less";
-//@import "packages/pfafman:bootstrap-switch-less/lib/less/build.import.less";
-//@import "packages/pfafman:jasny-bootstrap-less/lib/less/variables.import.less";
-//@navmenu-width: 220px;
-//@import "packages/pfafman:jasny-bootstrap-less/lib/less/jasny-bootstrap.import.less";
+@import 'variables';
+@import 'materialize';
 
-
-//@import "grayscale.import.less";
-//@import "notFound.import.less";
-
-@import "mixins.import.less";
+//@import "mixins.import.less";
 
 
 body {
@@ -39,7 +36,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  .blur(30px);
+  @include blur(30px);
   opacity: 0.4;
 }
 
@@ -93,7 +90,7 @@ img {
 
 .modal-open {
   .main {
-    .blur(1px);
+    @include blur(1px);
   }
 }
 
@@ -133,19 +130,19 @@ img {
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;
-    .transition(all 2s ease-in-out);
-    .blur(1px);
+    @include transition(all 2s ease-in-out);
+    @include blur(1px);
   }
 
   .home:hover {
     //color: #333;
     //background: #ccc;
     opacity: 0.95;
-    .blur(0px);
+    @include blur(0px);
   }
 
   .home-image {
-    .transition(all 1.0s ease);
+    @include transition(all 1.0s ease);
     margin-top: 40px;
     margin-bottom: 40px;
     opacity: 0.3;
@@ -153,7 +150,7 @@ img {
   }
 
   .home-image:hover {
-    .transform(rotate3d(1, 1, 1, -10deg));
+    @include transform(rotate3d(1, 1, 1, -10deg));
   }
 
   .standard {

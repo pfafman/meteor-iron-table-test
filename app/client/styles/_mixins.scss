@@ -1,0 +1,20 @@
+@mixin blur($blur) {
+  -webkit-filter: blur($blur); 
+     -moz-filter: blur($blur); 
+       -o-filter: blur($blur); 
+      -ms-filter: blur($blur); 
+          filter: blur($blur); 
+}
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
