@@ -5,7 +5,6 @@
 
 # Note: dburles:mongo-collection-instances must be before other packages that use mongo
 
-meteor-platform
 coffeescript
 iron:router
 less
@@ -22,3 +21,17 @@ reactive-var
 meteorhacks:kadira
 meteorhacks:kadira-debug
 fourseven:scss
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
