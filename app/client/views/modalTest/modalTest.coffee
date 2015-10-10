@@ -55,8 +55,10 @@ Template.modalTest.events
     console.log('confirmTest')
     MaterializeModal.confirm
       message: 'Do it?'
-      callback: (yesNo) ->
-        if yesNo
+      callback: (error, rtn) ->
+        if error
+          Materialize.toast("<i class='mdi-alert-warning left'></i>Error: #{error.reason}!", 3000, 'red')
+        else if rtn?.submit
           Materialize.toast("<i class='mdi-action-done left'></i>Doing it!", 3000, 'green')
         else
           Materialize.toast("<i class='mdi-av-not-interested left'></i>Not doing it!", 3000, 'blue')
@@ -66,12 +68,14 @@ Template.modalTest.events
     console.log('promptTest')
     MaterializeModal.prompt
       message: 'Enter something'
-      callback: (yesNo, rtn, event) ->
-        if yesNo
-          if not rtn
+      callback: (error, rtn) ->
+        if error
+          Materialize.toast("<i class='mdi-alert-warning left'></i>Error: #{error.reason}!", 3000, 'red')
+        else if rtn?.submit
+          if not rtn?.value
             Materialize.toast("<i class='mdi-alert-warning left'></i>You did not enter anything!", 3000, 'red')
           else
-            Materialize.toast("<i class='mdi-action-done left'></i>Entered: #{rtn}", 3000, 'green')
+            Materialize.toast("<i class='mdi-action-done left'></i>Entered: #{rtn.value}", 3000, 'green')
         else
           Materialize.toast("<i class='mdi-av-not-interested left'></i>Cancelled", 3000, 'blue')
 
@@ -80,12 +84,15 @@ Template.modalTest.events
     console.log('formTest')
     MaterializeModal.form
       bodyTemplate: 'testForm'
-      callback: (yesNo, rtn, event) ->
-        if yesNo
-          if not rtn
+      callback: (error, rtn) ->
+        if error
+          Materialize.toast("<i class='mdi-alert-warning left'></i>Error: #{error.reason}!", 3000, 'red')
+        else if rtn.submit
+          if not rtn.value
             Materialize.toast("<i class='mdi-alert-warning left'></i>You did not enter anything!", 3000, 'red')
           else
-            Materialize.toast("<i class='mdi-action-done left'></i>Entered: #{rtn.firstname}, #{rtn.telephone}, #{rtn.checkmark}", 3000)
+            console.log("Form rtn", rtn)
+            Materialize.toast("<i class='mdi-action-done left'></i>Entered: #{rtn.value.firstname}, #{rtn.value.telephone}, #{rtn.value.checkmark}", 3000)
         else
           Materialize.toast("<i class='mdi-av-not-interested left'></i>Cancelled", 3000, 'blue')
 
